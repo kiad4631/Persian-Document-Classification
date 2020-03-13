@@ -6,7 +6,8 @@ Currently, the classification subject of Persian articles is sparse, limited, an
 3. [Pytext](test_dir)
 
 ## Fasttext
-[FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.. This model allows you to train supervised and unsupervised representations of words and sentences.
+[FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification. This model allows you to train supervised and unsupervised representations of words and sentences.
+At first we use pre-trained word vectors for _Persian_ language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
 
 
 

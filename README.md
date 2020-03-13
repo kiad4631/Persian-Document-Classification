@@ -5,5 +5,9 @@ Currently, the classification subject of Persian articles is sparse, limited, an
 2. [Gensim](test_dir)
 3. [Pytext](test_dir)
 
+## Fasttext
+[FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.. This model allows you to train supervised and unsupervised representations of words and sentences.
+
+
 
 

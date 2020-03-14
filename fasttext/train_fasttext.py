@@ -121,7 +121,7 @@ for i in range(len(X_test)):
 
 #Model architecture and train
 batch_size = 128
-num_classes = 7
+num_classes = 6
 epochs = 20
 model = Sequential()
 model.add(Dense(512, activation='relu', input_shape=(300,)))

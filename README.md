@@ -14,9 +14,7 @@ Or use this pyhton code (e.g. Persian/Farsi):
 
 ```python
 import fasttext.util
-
 fasttext.util.download_model('fa', if_exists='ignore')  # English
-
 ft = fasttext.load_model('cc.fa.300.bin')
 ```
 

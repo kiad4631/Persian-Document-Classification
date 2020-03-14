@@ -136,6 +136,7 @@ history = model.fit(np.array(avg_train), Y_oh_train,
                     batch_size=batch_size,
                     epochs=epochs,
                     verbose=1)
+model.save('my_model.h5')
 #Print evaluation model on test data
 score = model.evaluate(np.array(avg_test), Y_oh_test, verbose=0)
 print('Test loss:', score[0])

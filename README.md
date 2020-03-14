@@ -12,9 +12,9 @@ You can download bin or text file of every language directly from here : https:/
 
 Or use this pyhton code (e.g. Persian/Farsi):
 
-import fasttext.util
+```import fasttext.util
 fasttext.util.download_model('fa', if_exists='ignore')  # English
-ft = fasttext.load_model('cc.fa.300.bin')
+ft = fasttext.load_model('cc.fa.300.bin')```
 
 
 

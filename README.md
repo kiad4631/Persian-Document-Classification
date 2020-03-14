@@ -19,7 +19,7 @@ ft = fasttext.load_model('cc.fa.300.bin')
 ```
 
 However, you need just pre-trained text file to do this step.
-By running _train.py_ you are given an MLP text classification model with pre-trained Persian word embeddings.
+By placing downloaded embedding text file in the fasttext folder and running _train.py_ you are given an accuracy and error of train and evaluation of MLP text classification model with fasttext pre-trained Persian word embeddings.
 
 
 

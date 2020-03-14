@@ -31,17 +31,15 @@ def clear_data(inputFilePath, outPutFilePath):
             line = bytes(line, 'utf-8').decode('utf-8', 'ignore')
             ofp.write(line)
     print("Corpus Cleaned")
-
-
+    
 # Set path
 inputFilePath = "cleaned_full_hamshahri.txt"
 cleanFilePath = "clean.txt"
 modelPath = "model"
 
-# Clean and Train
+# Clean and Train Word2Vec model
 clear_data(inputFilePath, cleanFilePath)
 train_model(cleanFilePath, modelPath)
-
 
 # Read excel data
 data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')

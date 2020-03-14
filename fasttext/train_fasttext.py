@@ -45,6 +45,7 @@ def read_csv(filename):
     return X, Y
 
 # Split train and test data with ratio 0.8, 0.2 respectively
+# Data already shuffled by excel
 data_xlsx.iloc[0:int(len(data_xlsx)*0.8)].to_csv('train.csv' , encoding = "utf-8" , index = False)
 data_xlsx.iloc[int(len(data_xlsx)*0.8):].to_csv('test.csv' , encoding = "utf-8" , index = False)
 

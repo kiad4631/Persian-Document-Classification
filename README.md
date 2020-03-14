@@ -8,15 +8,18 @@ Currently, the classification subject of Persian articles is sparse, limited, an
 ## Fasttext
 [FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.
 At first we use [pre-trained](https://fasttext.cc/docs/en/crawl-vectors.html) word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
-You can download bin or text file of every language directly from here : https://fasttext.cc/docs/en/crawl-vectors.html
+For more detailes and download pre-trained (bin/text) file of every language directly you can go here: https://fasttext.cc/docs/en/crawl-vectors.html
 
-Or use this pyhton code (e.g. Persian/Farsi):
+Also, this lines of python code (e.g. Persian/Farsi) works for you to download bin file:
 
 ```python
 import fasttext.util
 fasttext.util.download_model('fa', if_exists='ignore')  # English
 ft = fasttext.load_model('cc.fa.300.bin')
 ```
+
+However, you need just pre-trained text file to do this step.
+By running _train.py_ you be given a MLP text classification model with pre-trained persian word embeddings.
 
 
 

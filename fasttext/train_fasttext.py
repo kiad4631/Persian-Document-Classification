@@ -142,8 +142,3 @@ model.save('my_model.h5')
 score = model.evaluate(np.array(avg_test), Y_oh_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
-
-
-
-
-

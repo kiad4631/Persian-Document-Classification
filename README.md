@@ -19,13 +19,13 @@ ft = fasttext.load_model('cc.fa.300.bin')
 ```
 
 However, you need just pre-trained text file to do this step.
-By placing downloaded embedding text file in the fasttext folder and running _train.py_ you are given an MLP text classification model (with report of accuracy and error on the train and test data) with fasttext pre-trained Persian word embeddings.
+By placing downloaded embedding text file in the fasttext folder and running [_train.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given an MLP text classification model (with report of accuracy and error on the train and test data) with fasttext pre-trained Persian word embeddings.
 
 
 ## Gensim
 This is an open-source python library for natural language processing. The [Gensim](https://github.com/RaRe-Technologies/gensim) library enables us to extend embedding by training our Word2vec model (Another word representation model like FastTesxt), using CBOW algorithms or skip-gram algorithm.
 
-To train this model, first of all, the data should be convert to .txt file and then some [cleaning steps](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data) be done on it. Then the final text file is given to the model and is trained. 
+To train this model, first of all, the data should be convert to .txt file and then some [cleaning steps](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data) be done on it. Then the final text file is given to the model and is trained.([gensim/train_gensim.py](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim))
 
 
 

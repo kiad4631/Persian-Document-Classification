@@ -7,7 +7,11 @@ Currently, the classification subject of Persian articles is sparse, limited, an
 
 ## Fasttext
 [FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.
-At first we use [pre-trained](https://fasttext.cc/docs/en/crawl-vectors.html) word vectors for _Persian_ language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
+At first we use [pre-trained](https://fasttext.cc/docs/en/crawl-vectors.html) word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
+You can download bin or text file of every language directly from here : (https://fasttext.cc/docs/en/crawl-vectors.html)
+Or use this pyhton code:
+
+
 
 
 

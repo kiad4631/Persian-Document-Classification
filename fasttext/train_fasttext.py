@@ -128,7 +128,7 @@ model.add(Dense(512, activation='relu', input_shape=(300,)))
 model.add(Dropout(0.2))
 model.add(Dense(512, activation='relu'))
 model.add(Dropout(0.2))
-model.add(Dense(6, activation='softmax'))
+model.add(Dense(num_classes, activation='softmax'))
 model.summary()
 model.compile(loss='categorical_crossentropy',
               optimizer=RMSprop(),

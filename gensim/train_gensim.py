@@ -121,7 +121,7 @@ def read_word2vec(word2vec_file):
     return words_to_index, index_to_words, word_to_vec_map
 
 # Dictionary mapping words to their fasstest vector representation
-word_to_index, index_to_word, word_to_vec_map = read_word2vec('model.txt')
+word_to_index, index_to_word, word_to_vec_map = read_word2vec('./model/model.txt')
     
 # Helper function for converting a sentence to the average embedding of words in the sentence
 def sentence_to_avg(sentence, word_to_vec_map):

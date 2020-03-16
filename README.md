@@ -87,7 +87,7 @@ This json file is like this:
   "export_caffe2_path": "/tmp/model.caffe2.predictor"
 }
 ```
-And you should change it to this for:
+And you should change it to this:
 ```
 {
   "version": 8,

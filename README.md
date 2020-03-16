@@ -90,30 +90,30 @@ This json file is like this:
 And you should change it to this:
 ```
 {
-  "version": 8,
   "task": {
-    "DocumentClassificationTask": {
-      "data": {
-        "source": {
-          "TSVDataSource": {
-            "field_names": ["text" , "label"],
-            "train_filename": "/content/train.tsv",
-            "test_filename": "/content/test.tsv",
-            "eval_filename": "/content/eval.tsv"
-          }
-        }
+    
+    "DocClassificationTask": {
+      "trainer": {
+        "epochs": 10,
+        "random_seed": 0,
+        "early_stop_after": 0,
+        "max_clip_norm": null,
+        "report_train_metrics": true
       },
-      "model": {
-        "DocModel": {
-          "representation": {
-            "DocNNRepresentation": {}
-          }
-        }
+      "data_handler": {
+        "columns_to_read": ["text", "doc_label"],
+        "eval_batch_size": 1,
+        "max_seq_len": -1,
+        "shuffle": true,
+        "sort_within_batch": true,
+        "test_batch_size": 1,
+        "train_batch_size": 1,
+        "train_path": "/content/train.tsv",
+        "eval_path": "/content/eval.tsv",
+        "test_path": "/content/test.tsv"
       }
     }
-  },
-  "export_torchscript_path": "/tmp/new_docnn.pt1",
-  "export_caffe2_path": "/tmp/model.caffe2.predictor"
+  }
 }
 ```
 All you have to do is preparing your dataset(train, test, eval) in __.tsv__ format.

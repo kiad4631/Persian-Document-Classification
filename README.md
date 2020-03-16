@@ -6,9 +6,7 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 
 
 1. Fasttext
-
 2. Gensim
-
 3. Pytext
 
 

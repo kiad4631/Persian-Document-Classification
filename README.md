@@ -126,3 +126,13 @@ Also, the app.sh file has placed in this repo.
 TSV format: it means the text and its label have to be seprated with _tab_ and except for this tab, there should be no tab in your texts.
 If you want, you can change the config file as well. Then train the data, such as how described that in the pytext repo and enjoy it.
 
+## Citation
+Please cite our paper in your publications if it helps your research:
+```
+@inproceedings{li2019exposing,
+  title={Persian Document Classification Using Deep Learning Methods},
+  author= Nafiseh, Davari and Mahya Mahdian},
+  booktitle={28th Iranian Conference on Electrical Engineering (ICEE2020)},
+  year={2019}
+}
+```

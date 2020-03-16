@@ -55,7 +55,49 @@ This is an open-source python library for natural language processing. The [Gens
 To train this model, first of all, the data should be convert to .txt file and then some [cleaning steps](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data) be done on it. Then the final text file is given to the model and is trained. You can download pre-trained embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classifier with [_train_gensim.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
 ## Pytext
-At first you should clone the pytext repository: https://github.com/facebookresearch/pytext
+PyText is a deep-learning based NLP modeling framework built on PyTorch.
+For applying this framwork the first step is cloning the pytext repository: https://github.com/facebookresearch/pytext
+
+As you can see in __Train your first text classifier__ section of this repo, there is a docnn.json file that is required for training.
+
+The json file is like this:
+```
+{
+  "version": 8,
+  "task": {
+    "DocumentClassificationTask": {
+      "data": {
+        "source": {
+          "TSVDataSource": {
+            "field_names": ["text" , "label"],
+            "train_filename": "/content/train.tsv",
+            "test_filename": "/content/test.tsv",
+            "eval_filename": "/content/eval.tsv"
+          }
+        }
+      },
+      "model": {
+        "DocModel": {
+          "representation": {
+            "DocNNRepresentation": {}
+          }
+        }
+      }
+    }
+  },
+  "export_torchscript_path": "/tmp/new_docnn.pt1",
+  "export_caffe2_path": "/tmp/model.caffe2.predictor"
+}
+```
+All you have to do is converting your dataset(train, test, eval) to .tsv format.
+For this purpose, some commands are defined below:
+```
+./app.sh file.csv file.tsv.txt
+mv file.tsv.txt file.tsv
+```
+
+Also, the app.sh file has placed in this repo.
+
 
 
 

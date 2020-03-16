@@ -131,7 +131,7 @@ Please cite our paper in your publications if it helps your research:
 ```
 @inproceedings{li2019exposing,
   title={Persian Document Classification Using Deep Learning Methods},
-  author= Nafiseh, Davari and Mahya Mahdian},
+  author= Nafiseh Davari, Mahya Mahdian Tabrizi, Alireza Akhavanpour, and Negin Daneshpour},
   booktitle={28th Iranian Conference on Electrical Engineering (ICEE2020)},
   year={2019}
 }

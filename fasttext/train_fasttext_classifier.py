@@ -8,6 +8,7 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
 
 # Read excel data
+# You should download it by yourself from: 
 data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')
 data_xlsx.head()
 

@@ -2,12 +2,7 @@ from __future__ import unicode_literals
 from hazm import *
 import re
 from gensim.models import Word2Vec
-
 import pandas as pd
-data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')
-with open("full_hamshahri.txt" , "w" , encoding="utf8") as full:
-    for i in range(len(data_xlsx)):
-        full.write(data_xlsx["TEXT[1]/text()"][i])
 
 # Normalizing
 def normalize(input_file , normalized_file):
@@ -17,8 +12,6 @@ def normalize(input_file , normalized_file):
             for line in infile:
                 text = normalizer.normalize(line)
                 normalized_outfile.write(text)
-    infile.close()
-    normalized_outfile.close()
     return normalized_outfile
 
 
@@ -34,7 +27,6 @@ def remove_chars(input_file , justPersian_file):
             '-\u063A\u0641\u0642\u06A9\u06AF\u0644-\u0648\u06CC\u200c]',
             "", sent)
         justPersian_file.write(new_string.replace("  ", " "))
-    justPersian_file.close()
     return justPersian_file
 
 # Stop Words
@@ -74,11 +66,15 @@ def remove_stopWords(input_file , no_stopWords_file):
                     if (" "+ word + " ") in line:
                         line = line.replace(" " + word + " ", " ")
                 no_stop_words_outfile.write(line)
-    just_persian_outfile.close()
-    no_stop_words_outfile.close()
     return no_stop_words_outfile
 
 # Start Cleaning
+# You should download full_hamshahri.xlsx by yourself from: http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%AF%D8%A7%D8%AF%D9%87--%DA%A9%D8%A7%D9%85%D9%84-%D9%87%D9%85%D8%B4%D9%87%D8%B1%DB%8C-%D9%86%D8%B3%D8%AE%D9%87-1-%D8%B4%D8%A7%D9%85%D9%84-166-%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%86%D8%AF-%D8%AF%D8%B1-%D9%81%D8%B1%D9%85%D8%AA-%D8%A7%DA%A9%D8%B3%D9%84-%D9%88-csv
+data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')
+with open("full_hamshahri.txt" , "w" , encoding="utf8") as full:
+    for i in range(len(data_xlsx)):
+        full.write(data_xlsx["TEXT[1]/text()"][i])
+
 i0 = "full_hamshahri.txt"
 o0 = "normalized_full_hamshahri.txt"
 i1 = normalize(i0 , o0)

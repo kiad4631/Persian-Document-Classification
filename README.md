@@ -67,6 +67,35 @@ This json file is like this:
       "data": {
         "source": {
           "TSVDataSource": {
+            "field_names": ["label", "slots", "text"],
+            "train_filename": "tests/data/train_data_tiny.tsv",
+            "test_filename": "tests/data/test_data_tiny.tsv",
+            "eval_filename": "tests/data/test_data_tiny.tsv"
+          }
+        }
+      },
+      "model": {
+        "DocModel": {
+          "representation": {
+            "DocNNRepresentation": {}
+          }
+        }
+      }
+    }
+  },
+  "export_torchscript_path": "/tmp/new_docnn.pt1",
+  "export_caffe2_path": "/tmp/model.caffe2.predictor"
+}
+```
+And you should change it to this:
+```
+{
+  "version": 8,
+  "task": {
+    "DocumentClassificationTask": {
+      "data": {
+        "source": {
+          "TSVDataSource": {
             "field_names": ["text" , "label"],
             "train_filename": "/content/train.tsv",
             "test_filename": "/content/test.tsv",

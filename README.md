@@ -87,7 +87,7 @@ This json file is like this:
   "export_caffe2_path": "/tmp/model.caffe2.predictor"
 }
 ```
-All you have to do is preparing your dataset(train, test, eval) in .tsv format.
+All you have to do is preparing your dataset(train, test, eval) in __.tsv__ format.
 For this purpose, some commands are defined below:
 ```
 ./app.sh file.csv file.tsv.txt

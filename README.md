@@ -54,8 +54,8 @@ This is an open-source python library for natural language processing. The [Gens
 
 To train this model, first of all, the data should be convert to .txt file and then some [cleaning steps](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data) be done on it. Then the final text file is given to the model and is trained. You can download pre-trained embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classifier with [_train_gensim.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
-
-
+## Pytext
+At first you should clone the pytext repository: https://github.com/facebookresearch/pytext
 
 
 

@@ -85,7 +85,7 @@ This json file is like this:
   "export_caffe2_path": "/tmp/model.caffe2.predictor"
 }
 ```
-But the config of this project is like this:
+But the config of this project is it:
 ```
 {
   "task": {

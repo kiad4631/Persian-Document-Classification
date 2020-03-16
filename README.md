@@ -125,6 +125,6 @@ mv file.tsv.txt file.tsv
 
 Also, the app.sh file has placed in this repo.
 
-
+TSV: it means the text and its label have to be seprated with _tab_ and except for this tab, there should be no tab in your texts.
 
 

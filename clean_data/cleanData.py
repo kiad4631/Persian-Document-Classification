@@ -73,6 +73,14 @@ def remove_stopWords(input_file , no_stopWords_file):
     return no_stop_words_outfile
 
 # Start Cleaning
+# You should make it by yourself with these easy lines of code:
+###
+# import pandas as pd
+# data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')
+# with open("full_hamshahri.txt" , "w" , encoding="utf8") as full:
+#     for i in range(len(data_xlsx)):
+#         full.write(data_xlsx["TEXT[1]/text()"][i])
+###
 i0 = "full_hamshahri.txt"
 o0 = "normalized_full_hamshahri.txt"
 i1 = normalize(i0 , o0)

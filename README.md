@@ -58,9 +58,9 @@ To train this model, first of all, the data should be convert to .txt file and t
 PyText is a deep-learning based NLP modeling framework built on PyTorch.
 For applying this framwork the first step is cloning the pytext repository: https://github.com/facebookresearch/pytext
 
-As you can see in __Train your first text classifier__ section of this repo, there is a docnn.json file that is required for training.
+As you can see in __"Train your first text classifier"__ section of this repo, there is a docnn.json file that is required for training.
 
-The json file is like this:
+This json file is like this:
 ```
 {
   "version": 8,

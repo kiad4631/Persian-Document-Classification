@@ -32,7 +32,7 @@ def clear_data(inputFilePath, outPutFilePath):
             ofp.write(line)
     print("Corpus Cleaned")
     
-# First run the /cleandata/cleanData.py then set paths
+# First run the /clean_data/cleanData.py then set paths
 inputFilePath = "cleaned_full_hamshahri.txt"
 cleanFilePath = "clean.txt"
 modelPath = "model"

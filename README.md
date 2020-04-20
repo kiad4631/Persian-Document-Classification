@@ -8,8 +8,8 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 * Dataset
 * Methods
   * [Fasttext](#Fasttext)
-  * Gensim
-  * PyText
+  * [Gensim](#Gensim)
+  * [PyText](#PyText)
 
 
 
@@ -21,7 +21,7 @@ The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%
 ## Methods 
 1. Fasttext
 2. Gensim
-3. Pytext
+3. PyText
 
 
 
@@ -64,7 +64,7 @@ This is an open-source python library for natural language processing. The [Gens
 
 To train this model, first of all, the data should be convert to .txt file and some cleaning steps be done on it [here](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data). Then the final text file is given to the model and is trained. You can download pre-trained embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classifier with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
-## Pytext
+## PyText
 PyText is a deep-learning based NLP modeling framework built on PyTorch.
 For applying this framwork the first step is cloning the pytext repository: https://github.com/facebookresearch/pytext
 

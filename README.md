@@ -7,7 +7,7 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 * Demo
 * Dataset
 * Methods
-  * Fasttext
+  * [Fasttext](#Fasttext)
   * Gensim
   * PyText
 

@@ -4,8 +4,13 @@
 The classification subject of Persian articles is sparse, limited, and non-automatic.This repo proposes methods based on deep learning for extracting features of Persian texts, methods for classifying texts and finally identifying the subject matter of the collection.
 
 ## Table of contents
+* Demo
 * Dataset
-* Methods [Fasttext]
+* Methods
+  * Fasttext
+  * Gensim
+  * PyText
+
 
 
 ## Dataset

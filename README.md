@@ -22,9 +22,9 @@ The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%
 
 [FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.
 
-At first, we use [pre-trained](https://fasttext.cc/docs/en/crawl-vectors.html) word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
+At first, we use pre-trained word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
 
-For more details and download pre-trained (bin/text) file of other languages directly you can go here: https://fasttext.cc/docs/en/crawl-vectors.html
+For more details and download pre-trained (bin/text) file of every language directly you can go here: https://fasttext.cc/docs/en/crawl-vectors.html
 
 
 Also, this lines of python code (e.g. Persian/Farsi) works for you to download the bin file:

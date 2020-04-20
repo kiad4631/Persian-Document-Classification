@@ -3,6 +3,9 @@
 # Persian Document Classification
 The classification subject of Persian articles is sparse, limited, and non-automatic.This repo proposes methods based on deep learning for extracting features of Persian texts, methods for classifying texts and finally identifying the subject matter of the collection.
 
+## Table of contents
+* Dataset
+* Methods [Fasttext]
 
 
 ## Dataset

@@ -8,7 +8,7 @@ from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
 
 # Read excel data
-# You should download full_hamshahri.xlsx by yourself from: http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%AF%D8%A7%D8%AF%D9%87--%DA%A9%D8%A7%D9%85%D9%84-%D9%87%D9%85%D8%B4%D9%87%D8%B1%DB%8C-%D9%86%D8%B3%D8%AE%D9%87-1-%D8%B4%D8%A7%D9%85%D9%84-166-%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%86%D8%AF-%D8%AF%D8%B1-%D9%81%D8%B1%D9%85%D8%AA-%D8%A7%DA%A9%D8%B3%D9%84-%D9%88-csv
+# You should download full_hamshahri.xlsx from Dataset section in Readme
 data_xlsx = pd.read_excel("full_hamshahri.xlsx" , encoding = 'utf-8')
 data_xlsx.head()
 
@@ -28,11 +28,11 @@ for i in range(len(data_xlsx)):
         data_xlsx["CAT[2]/text()"][i] = "5"
 
 
-# Take 100 first charachters of each document 
+# Take 100 first charachters of each document as title of documents
 for i in range(len(data_xlsx)):
     data_xlsx["TEXT[1]/text()"][i] = data_xlsx["TEXT[1]/text()"][i][:100]
 
-# Read train and test csv files and return data and corresponding labels
+# Read train and test csv files and return data with its corresponding labels
 def read_csv(filename):
     text = []
     label = []
@@ -46,7 +46,7 @@ def read_csv(filename):
     return X, Y
 
 # Split train and test data with ratio 0.8, 0.2 respectively
-# Data already shuffled by excel
+# Data already has been shuffled by excel
 data_xlsx.iloc[0:int(len(data_xlsx)*0.8)].to_csv('train.csv' , encoding = "utf-8" , index = False)
 data_xlsx.iloc[int(len(data_xlsx)*0.8):].to_csv('test.csv' , encoding = "utf-8" , index = False)
 
@@ -54,7 +54,7 @@ data_xlsx.iloc[int(len(data_xlsx)*0.8):].to_csv('test.csv' , encoding = "utf-8" 
 Y_train, X_train = read_csv('train.csv')
 Y_test, X_test = read_csv('test.csv')
 
-# Delete headers of train and test sets---The header of X_train and X_test is : TEXT[1]/text() and the header of Y_train and Y_test is : CAT[2]/text()
+# Delete headers of train and test sets. The header of X_train and X_test is : TEXT[1]/text() and the header of Y_train and Y_test is : CAT[2]/text()
 Y_train = np.delete(Y_train,0)
 X_train = np.delete(X_train,0)
 X_test = np.delete(X_test,0)
@@ -100,7 +100,7 @@ word_to_index, index_to_word, word_to_vec_map = read_fasttext_vecs('embeding.txt
 def sentence_to_avg(sentence, word_to_vec_map):
     # Split sentence into list of lower case words
     words = sentence.split()
-    # Initialize the average word vector, should have the same shape as your word vectors.
+    # Initialize the average word vector, should have the same shape as your word vectors(300d refering to dimention of pre-trained fasttext embedding file).
     avg = np.zeros((300,))
     # average the word vectors. You can loop over the words in the list "words".
     for w in words:
@@ -120,7 +120,7 @@ avg_test=[]
 for i in range(len(X_test)):
     avg_test.append(sentence_to_avg(X_test[i],word_to_vec_map))
 
-# MLP model architecture and train
+# MLP model architecture
 batch_size = 128
 num_classes = 7
 epochs = 20
@@ -134,13 +134,14 @@ model.summary()
 model.compile(loss='categorical_crossentropy',
               optimizer=RMSprop(),
               metrics=['accuracy'])
+# Train the model
 history = model.fit(np.array(avg_train), Y_oh_train,
                     batch_size=batch_size,
                     epochs=epochs,
                     verbose=1)
-# Save model
+# Save the model
 model.save('my_model.h5')
-# Print evaluation model on test data
+# Print evaluation of the model on test data
 score = model.evaluate(np.array(avg_test), Y_oh_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])

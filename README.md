@@ -18,8 +18,11 @@ The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%
 ## The Main Strategy
 
 First of all you should become familiar with this word: **Word Embedding**.
+
 Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation.(For more details please click [here](https://machinelearningmastery.com/what-are-word-embeddings/))
+
 The main strategy has been chosen in this project is Bag-of-Embeddings(BoE). Briefly, it means the numerical average of several word embeddings.
+
 In the paper, a word embedding for each word of every document is extracted using pre-trained FastText model on Persian Wikipedia(you can use both a pre-trained word vector model or train the model from scratch), then the numerical average of these word embeddings in each document is taken. The output of this operation is assigned to a MLP model and done.!
 
 
@@ -37,8 +40,13 @@ For more details and download pre-trained (bin/text) files for 157 languages inc
 This is an open-source python library for natural language processing. The [Gensim](https://github.com/RaRe-Technologies/gensim) library enables us to extend embedding by training our Word2vec model (Another word representation model like FastTesxt), using CBOW algorithms or skip-gram algorithm.
 
 
-
-To train this model, first of all, the data should be convert to .txt file and some cleaning steps be done on it [here](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data). Then the final text file is given to the model and is trained. You can download pre-trained embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classifier with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
+There is no pre-trained Word2vec model on Persian data so we train that from scratch on our dataset.
+To train this model, data should be convert to .txt file and some cleaning steps be done on it [here](https://github.com/Davari393/Persian-Document-Classification/tree/master/clean_data). 
+These cleaning steps are:
+  1) Normalization
+  2) Elimination of all characters except the Persian characters
+  3) Deletion stop words
+Then the final text file is given to the model and is trained. You can download pre-trained embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classifier with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
 ## PyText
 PyText is a deep-learning based NLP modeling framework built on PyTorch.

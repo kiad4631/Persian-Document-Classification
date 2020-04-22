@@ -8,9 +8,9 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 * [The Main Strategy](#The-Main-Strategy)
 * Methods
   * [Fasttext](#Fasttext)
+    * [Build Your Classifier](#Build-Your-Classifier)
   * [Gensim](#Gensim)
   * [PyText](#PyText)
-* [Build Your Classifier](#Build-Your-Classifier)
 
 ## Dataset
 The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%AF%D8%A7%D8%AF%D9%87--%DA%A9%D8%A7%D9%85%D9%84-%D9%87%D9%85%D8%B4%D9%87%D8%B1%DB%8C-%D9%86%D8%B3%D8%AE%D9%87-1-%D8%B4%D8%A7%D9%85%D9%84-166-%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%86%D8%AF-%D8%AF%D8%B1-%D9%81%D8%B1%D9%85%D8%AA-%D8%A7%DA%A9%D8%B3%D9%84-%D9%88-csv) dataset (a sub-body containing 166,000 documents with a specific theme), one of the most prestigious Persian language resources in the field of natural language, has been applied for feature extraction and text classification. 
@@ -34,6 +34,10 @@ The pre-trained word vector for ***Persian*** language, trained on Common Crawl 
 
 For more details and download pre-trained (bin/text) files for 157 languages including **Persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
 
+### Build Your Classifier
+
+You need just download a pre-trained word embedding **text** file to start building your own classifier.
+By placing the downloaded embedding text file in the fasttext folder and running [_fasttext_classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given a MLP text classification model (with the report of accuracy and error on the train and test data) which has been used BoE method with fasttext pre-trained word embeddings.
 
 ## Gensim
 
@@ -47,11 +51,11 @@ These cleaning steps are:
   2) Elimination of all characters except the Persian characters
   3) Deletion stop words
 
-Then the final text file is given to the model and is trained. You can download pre-trained and cleaned embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and the classifier with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
+Then the final text file is given to the model and is trained. You can download pre-trained and cleaned embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classify with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
 ## PyText
 PyText is a deep-learning based NLP modeling framework built on PyTorch.
-For applying this framwork the first step is cloning the pytext repository: https://github.com/facebookresearch/pytext
+For applying this framwork the first step is cloning the pytext repository in your own directory: https://github.com/facebookresearch/pytext
 
 As you can see in __"Train your first text classifier"__ section of this repo, there is a _docnn.json_ file that is required for training.
 
@@ -125,11 +129,6 @@ Also, the app.sh file has placed in this repo.
 TSV format: it means the text and its label have to be seprated with _tab_ and except for this tab, there should be no tab in your texts.
 If you want, you can change the config file as well. Then train the data, such as how described that in the pytext repo and enjoy it.
 
-
-## Build Your Classifier
-
-You need just download a pre-trained word embedding **text** file to start building your own classifier.
-By placing the downloaded embedding text file in the fasttext folder and running [_fasttext_classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given a MLP text classification model (with the report of accuracy and error on the train and test data) which has been used BoE method with fasttext pre-trained word embeddings.
 
 
 ## Citation

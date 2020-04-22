@@ -53,7 +53,8 @@ These cleaning steps are:
 
 Then the final text file is given to the model and is trained. You can download pre-trained and cleaned embeddings of the 166,000 documents hamshahri from [here](https://drive.google.com/open?id=1vmdgHgNje5r18VpZ2xf2cbdu5l_bfOXd) or train it and classify with [_train_gensim&classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/gensim) code.
 
-#### Note: If you want to use this model for another language, the cleaning steps should be change.(consepts are equal but for e.g. the Persian stop words are not equal Spanish stop words!)
+#### Note: 
+If you want to train this model for another language, the cleaning steps should be change.(consepts are equal but for e.g. the Persian stop words are not equal Spanish stop words!)
 
 ## PyText
 PyText is a deep-learning based NLP modeling framework built on PyTorch.

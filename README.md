@@ -6,7 +6,7 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 ## Table of contents
 * [Demo](#Demo)
 * [Dataset](#Dataset)
-* [The Main Strategy](#The Main Strategy)
+* [The Main Strategy](#The-Main-Strategy)
 * Methods
   * [Fasttext](#Fasttext)
   * [Gensim](#Gensim)

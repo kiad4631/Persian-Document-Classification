@@ -24,26 +24,9 @@ The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%
 
 At first, we use pre-trained word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
 
-For more details and download pre-trained (bin/text) files for 157 languages including **persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
+For more details and download pre-trained (bin/text) files for 157 languages including **Persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
 
-
-Also, this lines of python code (e.g. Persian/Farsi) works for you to download the bin file:
-
-
-
-```python
-
-import fasttext.util
-
-fasttext.util.download_model('fa', if_exists='ignore')  # English
-
-ft = fasttext.load_model('cc.fa.300.bin')
-
-```
-
-
-
-However, you need just a pre-trained word embedding text file. The pre-trained Persian embedding text file is ready [here](https://drive.google.com/open?id=1Zm7Hk4Il3WCcPRBYRhynWhqi1i_1h8w9).
+However, you need just a pre-trained word embedding text file to start build your own classifier. The pre-trained Persian embedding text file is ready [here](https://drive.google.com/open?id=1Zm7Hk4Il3WCcPRBYRhynWhqi1i_1h8w9).
 
 By placing the downloaded embedding text file in the fasttext folder and running [_fasttext_classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given a MLP text classification model (with the report of accuracy and error on the train and test data) with fasttext pre-trained Persian word embeddings.
 

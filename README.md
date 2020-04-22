@@ -8,7 +8,6 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 * [The Main Strategy](#The-Main-Strategy)
 * Methods
   * [Fasttext](#Fasttext)
-     * [Build Your Classifier](#Build-Your-Classifier)
   * [Gensim](#Gensim)
   * [PyText](#PyText)
 
@@ -33,8 +32,6 @@ In the paper, a word embedding for each word of every document is extracted usin
 The pre-trained word vector for ***Persian*** language, trained on Common Crawl and Wikipedia has been used for this project. This pre-trained model has been trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
 
 For more details and download pre-trained (bin/text) files for 157 languages including **Persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
-
-### Build Your Classifier
 
 You need just download a pre-trained word embedding **text** file to start building your own classifier.
 By placing the downloaded embedding text file in the fasttext folder and running [_fasttext_classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given a MLP text classification model (with the report of accuracy and error on the train and test data) which has been used BoE method with fasttext pre-trained word embeddings.

@@ -17,12 +17,20 @@ The classification subject of Persian articles is sparse, limited, and non-autom
 ## Dataset
 The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%AF%D8%A7%D8%AF%D9%87--%DA%A9%D8%A7%D9%85%D9%84-%D9%87%D9%85%D8%B4%D9%87%D8%B1%DB%8C-%D9%86%D8%B3%D8%AE%D9%87-1-%D8%B4%D8%A7%D9%85%D9%84-166-%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%86%D8%AF-%D8%AF%D8%B1-%D9%81%D8%B1%D9%85%D8%AA-%D8%A7%DA%A9%D8%B3%D9%84-%D9%88-csv) dataset (a sub-body containing 166,000 documents with a specific theme), one of the most prestigious Persian language resources in the field of natural language, has been applied for feature extraction and text classification. 
 
+## The Main Strategy
+
+First of all you should become familiar with this word: **Word Embedding**.
+Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation.(For more details click [here](https://machinelearningmastery.com/what-are-word-embeddings/))
+The popular method for text classification is Bag-of-Embeddings(BoE). 
+Briefly, it means the numerical average of some word embeddings is taken.
+In the paper, a word embedding for each word of every document is extracted using pre-trained FastText on Persian Wikipedia(you can use both a pre-trained word vector model or train the model from scratch), then the numerical average of these word embeddings in each document is taken. The output of this operation is assigned to a MLP model and done.!
+
 
 ## Fasttext
 
 [FastText](https://github.com/facebookresearch/fastText/) is a library for efficient learning of word representations and sentence classification.
 
-At first, we have used pre-trained word vectors for ***Persian*** language, trained on Common Crawl and Wikipedia. This model was trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
+The pre-trained word vector for ***Persian*** language, trained on Common Crawl and Wikipedia has been used for this project. This pre-trained model has been trained using CBOW with position-weights, in dimension 300, with character n-grams of length 5, a window of size 5 and 10 negatives.
 
 For more details and download pre-trained (bin/text) files for 157 languages including **Persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
 

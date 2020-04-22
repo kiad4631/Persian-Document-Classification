@@ -20,10 +20,9 @@ The [Hamshahri](http://dataheart.ir/article/3487/%D9%85%D8%AC%D9%85%D9%88%D8%B9%
 ## The Main Strategy
 
 First of all you should become familiar with this word: **Word Embedding**.
-Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation.(For more details click [here](https://machinelearningmastery.com/what-are-word-embeddings/))
-The popular method for text classification is Bag-of-Embeddings(BoE). 
-Briefly, it means the numerical average of some word embeddings is taken.
-In the paper, a word embedding for each word of every document is extracted using pre-trained FastText on Persian Wikipedia(you can use both a pre-trained word vector model or train the model from scratch), then the numerical average of these word embeddings in each document is taken. The output of this operation is assigned to a MLP model and done.!
+Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation.(For more details please click [here](https://machinelearningmastery.com/what-are-word-embeddings/))
+The main strategy has been chosen in this project is Bag-of-Embeddings(BoE). Briefly, it means the numerical average of several word embeddings.
+In the paper, a word embedding for each word of every document is extracted using pre-trained FastText model on Persian Wikipedia(you can use both a pre-trained word vector model or train the model from scratch), then the numerical average of these word embeddings in each document is taken. The output of this operation is assigned to a MLP model and done.!
 
 
 ## Fasttext

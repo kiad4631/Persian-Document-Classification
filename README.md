@@ -26,7 +26,7 @@ At first, we use pre-trained word vectors for ***Persian*** language, trained on
 
 For more details and download pre-trained (bin/text) files for 157 languages including **Persian**, go through this link: https://fasttext.cc/docs/en/crawl-vectors.html
 
-However, you need just a pre-trained word embedding text file to start build your own classifier. The pre-trained Persian embedding text file is ready [here](https://drive.google.com/open?id=1Zm7Hk4Il3WCcPRBYRhynWhqi1i_1h8w9).
+However, you need just a pre-trained word embedding text file to start building your own classifier. The pre-trained Persian embedding text file is ready [here](https://drive.google.com/open?id=1Zm7Hk4Il3WCcPRBYRhynWhqi1i_1h8w9).
 
 By placing the downloaded embedding text file in the fasttext folder and running [_fasttext_classifier.py_](https://github.com/Davari393/Persian-Document-Classification/tree/master/fasttext) you are given a MLP text classification model (with the report of accuracy and error on the train and test data) with fasttext pre-trained Persian word embeddings.
 
